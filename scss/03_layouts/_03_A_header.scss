@@ -1,0 +1,72 @@
+.header{
+    background-color: rgba(0,0,0,0.5);
+    border-bottom: 1px solid $primaryColor;
+    border-left: 1px solid $primaryColor;
+    border-right: 1px solid $primaryColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 40px 20px 40px;
+    border-radius: 0px 0px 20px 20px;
+    position: relative;
+    width: 800px;
+
+    &--box-logo{
+        color: $primaryColor;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        position: absolute;
+        cursor: pointer;
+        &:hover{
+            color: $primaryColorHover;
+        }
+        &__logo-chatcode{
+            font-size: 2em;
+        }
+    }
+
+    &--box-icon-nav{
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        &__icon-minimize{
+            @extend %iconNav;
+            &:hover{
+                fill: $primaryColorHover;
+            }
+        }
+        &__icon-params{
+            @extend %iconNav;
+            &:hover{
+                fill: $primaryColorHover;
+            }
+        }
+    }
+
+    &--nav{
+        margin-top: 70px;
+        position: relative;
+        &__ul{
+            display: flex;
+        }
+        &__a{
+            font-family: 'Roboto', sans-serif;
+            margin: 20px;
+            font-size: 1.5em;
+            color: rgba(32, 190, 245, 1);
+            &:hover{
+                color: $primaryColorHover;
+            }
+        }
+    }
+
+    &--icon-expand{
+        fill:  rgba(32, 190, 245, 1);
+        height: 30px;
+        width: 30px;
+        cursor: pointer;
+        &:hover{
+            fill: $primaryColorHover;
+        }
+    }
+}
